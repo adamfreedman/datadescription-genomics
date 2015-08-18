@@ -49,7 +49,6 @@ After answering the question, you should avoid saving this file; we don't want t
 
 We are going to be doing our formal shell lesson next. However, we can already play with a few simple commands that have you thinking about how the shell can be useful tool in examining your dataset
 
-```At this point, please verify that you are working from the the ami-6516b30e image where we have prestaged all the data for the rest of the lessons```
 
 
 During the shell lesson we will go much more step-by-step, building our way through every command before we use it. For this first command go ahead any copy and paste if you are just getting use to the shell. The other commands are short enough to type and follow. 
