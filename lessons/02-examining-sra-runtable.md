@@ -39,9 +39,9 @@ You should now have a file called **SraRunTable.txt**
 
 Taking a quick glance at the file, you should be able to answer the following questions:
 
-1. What strain of *E. coli* was used in this experiment?
-2. What was the sequencing platform used for this experiment?
-3. What samples in the experiment contain [paired end](http://www.illumina.com/technology/next-generation-sequencing/paired-end-sequencing_assay.html) sequencing data?
+2. What strain of *E. coli* was used in this experiment?
+3. What was the sequencing platform used for this experiment?
+4. What samples in the experiment contain [paired end](http://www.illumina.com/technology/next-generation-sequencing/paired-end-sequencing_assay.html) sequencing data?
 
 After answering the question, you should avoid saving this file; we don't want to make any changes. If you were to save this file, make sure you save it as a plain **.txt** file. 
 
@@ -53,18 +53,19 @@ We are going to be doing our formal shell lesson next. However, we can already p
 
 During the shell lesson we will go much more step-by-step, building our way through every command before we use it. For this first command go ahead any copy and paste if you are just getting use to the shell. The other commands are short enough to type and follow. 
 
-1. Navigate to the sample SraRunTable.txt file that has be placed on your remote computer
+1. Login to your cluster account and navigate to the sample SraRunTable.txt file that has be placed on your remote computer
 
 ```$ cd ~/dc_sample_data/sra_metadata```
+
 
 2. Display the contents of the SraRunTable.txt on your screen
 ```$ cat SraRunTable.txt```
 
-3. That's probably not too pretty, so lets view it in a little more organized a format
+3. The table has several columns, which are difficult to look at all at once. Let's look at the first 10 columns instead
 ```
-$ column -t SraRunTable.txt
+$ cut -f1-10 SraRunTable.txt |head -10
 ```
-4. In this case we are using the 'column' program to make the print out more pretty. 
+4. In this case we are using the 'cut' program to make the print out columns specified with '-f', and then pipe it to head. 
 
 
 In the next lesson on the shell, we will be able to find out how to do a lot more with the shell, including what else the commands we have done can do. 
